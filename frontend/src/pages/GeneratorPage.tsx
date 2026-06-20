@@ -28,7 +28,7 @@ function Navbar({ onReset }: { onReset: () => void }) {
               Sujit Kumar
             </span>
             <span className="font-mono text-[10px] tracking-widest text-gray-dim">
-              sujit@digitalheroesco.com
+              sujitkumarsamn@gmail.com
             </span>
           </div>
           <button
