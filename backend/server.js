@@ -47,7 +47,11 @@ app.use((req, res) => {
 });
 
 // ─── Start ────────────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
-  console.log(`\n🚀 Resume Bullet Generator API running on http://localhost:${PORT}`);
-  console.log(`   Gemini API Key: ${process.env.GEMINI_API_KEY ? "✅ configured" : "❌ MISSING – set in .env"}`);
-});
+if (process.env.NODE_ENV !== "production") {
+  app.listen(PORT, () => {
+    console.log(`\n🚀 Resume Bullet Generator API running on http://localhost:${PORT}`);
+    console.log(`   Gemini API Key: ${process.env.GEMINI_API_KEY ? "✅ configured" : "❌ MISSING – set in .env"}`);
+  });
+}
+
+module.exports = app;
