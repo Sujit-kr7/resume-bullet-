@@ -15,12 +15,22 @@ function Navbar({ onReset }: { onReset: () => void }) {
           BULLET_GEN
         </span>
         <nav className="flex items-center gap-6">
-          <button className="font-mono text-xs tracking-wider uppercase text-gray-dim hover:text-black transition-colors flex items-center gap-1.5">
-            <History size={13} /> History
-          </button>
-          <button className="font-mono text-xs tracking-wider uppercase text-gray-dim hover:text-black transition-colors flex items-center gap-1.5">
-            <User size={13} /> Profile
-          </button>
+          <a
+            href="https://digitalheroesco.com"
+            target="_blank"
+            rel="noreferrer"
+            className="btn-outline py-1.5 px-3 text-xs"
+          >
+            Built for Digital Heroes
+          </a>
+          <div className="hidden md:flex flex-col items-end mr-2">
+            <span className="font-mono text-xs font-bold uppercase tracking-wider text-black">
+              Sujit Kumar
+            </span>
+            <span className="font-mono text-[10px] tracking-widest text-gray-dim">
+              sujit@digitalheroesco.com
+            </span>
+          </div>
           <button
             onClick={() => navigate('/')}
             className="btn-black py-1.5 px-4 text-xs"
